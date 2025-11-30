@@ -1,12 +1,11 @@
-/* Importa Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 .app-wrapper {
-  font-family: 'Playfair Display', serif; // fuente general para contenido
+  font-family: 'Playfair Display', serif;
   background-color: #f8f5f2;
 }
 
-/* Navbar limpio y elegante */
+
 .navbar-boda {
   background: transparent;
   box-shadow: none;
@@ -15,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
 
-  /* Título principal */
+
   .navbar-brand-title {
     font-family: 'Playfair Display', serif;
     color: #A27B5C;
@@ -33,21 +32,21 @@
     }
   }
 
-  /* Enlaces del menú */
+
   .navbar-nav-links {
     display: flex;
     gap: 7px;
-    align-items: center; // Alineación vertical de los enlaces
+    align-items: center;
 
     .nav-link {
-      font-family: 'Montserrat', sans-serif !important; // fuerza Montserrat
+      font-family: 'Montserrat', sans-serif !important;
       font-weight: 600 !important;
       color: #333;
       font-size: 1.1rem;
       text-decoration: none;
-      padding: 5px 10px; // Pequeño padding para área de clic
+      padding: 5px 10px;
       transition: color 0.3s ease;
-      white-space: nowrap; // Evita saltos de línea en enlaces largos
+      white-space: nowrap;
 
       &:hover {
         color: #A27B5C;

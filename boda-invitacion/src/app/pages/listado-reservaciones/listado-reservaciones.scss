@@ -1,5 +1,5 @@
 .titulo-listado {
-  color: #A67C52;       // mismo color que los títulos de tus formularios
+  color: #A67C52;
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -7,7 +7,7 @@
 }
 
 .tabla-container {
-  overflow-x: auto;      // permite scroll horizontal en pantallas pequeñas
+  overflow-x: auto;
   margin-bottom: 2rem;
 }
 
@@ -16,16 +16,16 @@
   margin: 0 auto;
   font-size: 0.9em;
   border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.15); // efecto glass
+  background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 8px;
 }
 
-/* Celdas y encabezados */
+
 .tabla-personalizada th,
 .tabla-personalizada td {
-  font-family: 'Montserrat', sans-serif !important; /* fuerza Montserrat */
+  font-family: 'Montserrat', sans-serif !important;
   padding: 10px 15px;
   text-align: center;
   font-weight: 400;
@@ -33,50 +33,45 @@
 
 
 .tabla-personalizada th {
-  background-color: rgba(166, 124, 82, 0.8); // encabezado marrón dorado
+  background-color: rgba(166, 124, 82, 0.8);
   color: white;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .tabla-personalizada tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.05); // filas alternadas
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .tabla-personalizada tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.1); // efecto hover
 }
 
-/* Asegúrate de que el selector que apunta al elemento activo/actual
-   tenga el peso de fuente que deseas (probablemente 400 o que simplemente lo omita). */
 
-.navbar-boda a.active, /* Si usas la clase 'active' directamente en <a> */
-.navbar-boda li.active a /* Si usas la clase 'active' en el li padre */
+.navbar-boda a.active,
+.navbar-boda li.active a
 {
     color: #A67C52;
-    font-weight: 400; /* Lo más seguro es forzar el peso normal */
+    font-weight: 400;
 }
 
 
 
-
-
-/* Wrapper general de toda la app */
 .app-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* asegura que el wrapper ocupe toda la altura de la ventana */
+  min-height: 100vh;
 }
 
-/* Contenido principal (tabla, título, etc.) */
+
 .contenido {
-  flex: 1; /* ocupa todo el espacio disponible */
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* Footer / redes sociales */
+
 #redes-sociales {
-  margin-top: auto; /* fuerza que quede al fondo */
+  margin-top: auto;
 }
 

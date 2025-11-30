@@ -8,11 +8,11 @@ import { throwError,Observable } from 'rxjs';
 })
 export class OpinionesService {
 
-  private apiURL = 'http://localhost:3000/opiniones'; // Ajusta según tu backend
+  private apiURL = 'http://localhost:3000/opiniones';
 
   constructor(private http: HttpClient) {}
 
-  // POST → Guardar opinión
+  // POST
  guardarOpinion(opinion: any): Observable<any> {
   const token = localStorage.getItem('token');
 
@@ -29,7 +29,7 @@ export class OpinionesService {
   return this.http.post(this.apiURL, opinion, { headers });
 }
 
-  // GET → Obtener todas las opiniones
+  // GET
   obtenerOpiniones(): Observable<any> {
     return this.http.get(this.apiURL);
   }

@@ -37,7 +37,7 @@ export class ReservacionComponent {
     this.fechaMinima = hoy.toISOString().split('T')[0];
 
     const limite = new Date();
-    limite.setMonth(limite.getMonth() + 6); // límite máximo 6 meses adelante
+    limite.setMonth(limite.getMonth() + 6);
     this.fechaMaxima = limite.toISOString().split('T')[0];
   }
 
@@ -45,7 +45,7 @@ export class ReservacionComponent {
     console.log("Datos enviados:", form.value);
     if (form.invalid) return;
 
-    // Obtener token guardado en localStorage después del login
+    // Obtener token
      const headers = this.usuariosService.getAuthHeaders();
     if (!headers) {
       alert("Debes iniciar sesión para hacer una reservación");

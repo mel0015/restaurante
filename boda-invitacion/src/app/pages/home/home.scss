@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
 
-// Variables de Color (Tema Bronce y Crema)
+// Variables de Color
 $primary-color: #A67C52; // Bronce/Cobre más clásico
 $secondary-color: #EEE9DD; // Crema claro
 $text-dark: #333333;
@@ -31,9 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .text-primary { color: $primary-color !important; }
 
-/* ==================================== */
-/* 1. SECCIÓN PRINCIPAL PARALLAX */
-/* ==================================== */
+
 .parallax-section {
     background-image: url('../../../assets/exterior.png');
     background-attachment: fixed;
@@ -129,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* NOMBRES DE LA PAREJA - Diseño Central y Elegante */
+
 .nombres-boda {
     text-align: center;
     position: relative;
@@ -159,20 +157,19 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     margin-top: 20px;
     display: inline-block;
-    color: $secondary-color; /* Usamos el crema para contraste */
+    color: $secondary-color;
     letter-spacing: 1px;
     backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ELIMINACIÓN DE LA SECCIÓN DE ENCABEZADO Y EL TEXTO GIGANTE,
-   CENTRÁNDONOS EN EL DISEÑO LIMPIO Y DE CONTRASTE. */
+
 .encabezado-boda, .nombres-boda h2 {
     display: none;
 }
 
 
-/* 📱 Responsividad */
+/*Responsividad */
 @media (max-width: 768px) {
     .nombres-boda h1 {
         font-size: 3.5rem;
@@ -191,13 +188,8 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.2rem;
     }
 }
-/* Cierre del bloque .parallax-section */
 
 
-/* ==================================== */
-/* 2. SECCIONES DE CONTENIDO GENERAL */
-/* (Mantenidas como estaban) */
-/* ==================================== */
 .section-gap {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -214,10 +206,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* ==================================== */
-/* 3. CARRUSEL DE GALERÍA */
-/* (Mantenido como estaba) */
-/* ==================================== */
+
 #galeria-carrusel {
 background-color: $secondary-color;
 
@@ -225,7 +214,7 @@ background-color: $secondary-color;
 
 .carousel-item img {
     width: 100%;
-    height: 910px;  /* << AUMENTA LA ALTURA DEL CARRUSEL */
+    height: 910px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -257,10 +246,7 @@ background-color: $secondary-color;
 }
 
 }
-/* ==================================== */
-/* 4. DETALLES (Tarjetas) */
-/* (Mantenidos como estaban) */
-/* ==================================== */
+
 #detalles-fiesta {
     background-color: $bg-light;
 
@@ -318,10 +304,7 @@ background-color: $secondary-color;
     }
 }
 
-/* ==================================== */
-/* 5. SECCIÓN DE RSVP */
-/* (Mantenida como estaba) */
-/* ==================================== */
+
 .rsvp-section {
     background-color: $primary-color;
     color: $text-light;

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
 
-// 🎨 Paleta de colores compartida
-$primary-color: #a27b5c; // Bronce/Cobre
-$secondary-color: #f8f4f0; // Crema claro
+// Paleta de colores
+$primary-color: #a27b5c;
+$secondary-color: #f8f4f0;
 $text-dark: #333333;
 $text-light: #fdfdfd;
 $bg-light: #fefcf9;
 $accent-color: #d7bfa5;
 
-// 🌸 Contenedor general
+// Contenedor general
 :host {
   display: block;
   background-color: $bg-light;
@@ -22,7 +22,7 @@ $accent-color: #d7bfa5;
   align-items: center;
 }
 
-// 🌿 Tarjeta del formulario
+// Tarjeta del formulario
 .form-container {
   background-color: $secondary-color;
   padding: 2.5rem 3rem;
@@ -48,7 +48,7 @@ $accent-color: #d7bfa5;
   }
 }
 
-// 🌾 Campos del formulario
+// Campos del formulario
 .form-group {
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@ $accent-color: #d7bfa5;
   }
 }
 
-// 💫 Botón único
+// Botón único
 button {
   background-color: $primary-color;
   color: $text-light;
@@ -115,7 +115,7 @@ button {
   }
 }
 
-// 💖 Mensaje de confirmación
+//  Mensaje de confirmación
 .resultado {
   margin-top: 2rem;
   background-color: lighten($secondary-color, 3%);
@@ -137,7 +137,7 @@ button {
   }
 }
 
-// ✨ Animación
+// Animación
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -149,7 +149,7 @@ button {
   }
 }
 
-// 📱 Responsividad
+// Responsividad
 @media (max-width: 480px) {
   .form-container {
     padding: 2rem;
@@ -164,8 +164,8 @@ button {
   }
 }
 
-//agregue desde aqui
-// 🌟 Contenedor de columnas lado a lado
+
+// Contenedor de columnas lado a lado
 .contenedor {
   display: flex;
   gap: 2rem;
@@ -177,11 +177,11 @@ button {
   margin-bottom: 3rem;
 }
 
-// 🌿 Columnas del formulario y contacto
+// Columnas del formulario y contacto
 .columna {
-  flex: 1 1 350px;       // Menos ancho que antes
-  max-width: 400px;      // Limita el ancho máximo
-  background-color: #ffffff; // Fondo blanco igual que reservaciones
+  flex: 1 1 350px;
+  max-width: 400px;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -193,11 +193,11 @@ button {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: 700;
-  color: $primary-color; // Texto oscuro
+  color: $primary-color;
   text-align: center;
 }
 
-// 🌾 Campos del formulario
+// Campos del formulario
 .columna label {
   display: block;
   margin-top: 1rem;
@@ -229,11 +229,11 @@ button {
 }
 
 textarea {
-  min-height: 120px; // Más largo para comentarios
+  min-height: 120px;
   resize: none;
 }
 
-// 💫 Botón
+// Botón
 .columna button {
   background-color: #a27b5c;
   color: #ffffff;
@@ -263,7 +263,7 @@ textarea {
 
 //iconos
 .contacto p::before {
-  content: attr(data-icon); // usar atributo data-icon en HTML
+  content: attr(data-icon);
   margin-right: 0.5rem;
   font-size: 1.2rem;
   vertical-align: middle;
@@ -281,8 +281,8 @@ textarea {
   font-size: 1rem;
   color: #333333;
 }
- //tambien es nuevo
-// 📱 Responsividad
+
+// Responsividad
 @media (max-width: 480px) {
   .columna {
     flex: 1 1 100%;

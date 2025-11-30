@@ -25,7 +25,6 @@ export class OpinionesComponent {
  onSubmit(form: NgForm) {
   if (form.invalid) return;
 
-  // Verificamos si el usuario está logueado
   const token = localStorage.getItem('token');
   if (!token) {
     alert("Debes iniciar sesión para dejar una opinión");
@@ -33,7 +32,6 @@ export class OpinionesComponent {
   }
 
 
-  // NO enviamos nombre
   const data = {
     calificacion: this.model.calificacion,
     comentario: this.model.comentario

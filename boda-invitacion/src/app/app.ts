@@ -15,11 +15,8 @@ export class App {
    constructor(private router: Router) {}
 
   logout() {
-    // Limpiar sesión / token
     localStorage.removeItem('token');
     localStorage.removeItem('usuario');
-
-    // Redirigir al inicio o login
-    this.router.navigate(['/']);
+    this.router.navigate(['/']);//redirige
   }
 }

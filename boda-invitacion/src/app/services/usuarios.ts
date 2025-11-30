@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UsuariosService {
 
-  private apiUrl = 'http://localhost:3000/usuarios'; // Ajusta si tu backend tiene otro puerto
+  private apiUrl = 'http://localhost:3000/usuarios';
 
   constructor(private http: HttpClient) {}
 
@@ -21,22 +21,22 @@ export class UsuariosService {
     return this.http.post(`${this.apiUrl}/login`, data);
   }
 
-  // Obtener token desde localStorage
+  // Obtener token
   getToken(): string | null {
     return localStorage.getItem('token');
   }
 
-  // Guardar token en localStorage
+  // Guardar token
   saveToken(token: string) {
     localStorage.setItem('token', token);
   }
 
-  // Eliminar token al cerrar sesión
+  // Eliminar token
   logout() {
     localStorage.removeItem('token');
   }
 
-  // Crear headers con token para peticiones protegidas
+
   getAuthHeaders(): HttpHeaders | null {
     const token = this.getToken();
     if (token) {

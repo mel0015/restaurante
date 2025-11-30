@@ -7,7 +7,7 @@ import { RegisterComponent } from './components/register/register';
 import { ListadoReservaciones } from './pages/listado-reservaciones/listado-reservaciones';
 import { ListadoOpiniones } from './pages/listado-opiniones/listado-opiniones';
 export const routes: Routes = [
-  // Página principal ahora es Home
+
     { path: '', component: Home },
     { path: 'reservacion', component: ReservacionComponent },
     { path: 'opiniones', component: OpinionesComponent },
@@ -15,6 +15,6 @@ export const routes: Routes = [
     { path: 'listado-opiniones', component: ListadoOpiniones },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-// Opcional: Ruta de comodín para redirigir si la URL no existe
+// Ruta de comodín para redirigir si la URL no existe
     { path: '**', redirectTo: '' }
 ];

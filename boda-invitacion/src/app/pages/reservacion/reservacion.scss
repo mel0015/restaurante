@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
 
-// 🎨 Paleta de colores compartida
-$primary-color: #a27b5c; // Bronce/Cobre
+// Paleta de colores
+$primary-color: #a27b5c;
 $secondary-color: #f8f4f0; // Crema claro
 $text-dark: #333333;
 $text-light: #fdfdfd;
 $bg-light: #fefcf9;
 $accent-color: #d7bfa5;
 
-// 🌸 Contenedor general
+// Contenedor general
 :host {
   display: block;
   background-color: $bg-light;
@@ -21,7 +21,7 @@ $accent-color: #d7bfa5;
   align-items: center;
 }
 
-// 🌿 Tarjeta del formulario
+// Tarjeta del formulario
 .form-container {
   background-color: white;
   padding: 2.5rem 3rem;
@@ -48,7 +48,7 @@ $accent-color: #d7bfa5;
   }
 }
 
-// 🌾 Campos del formulario
+// Campos del formulario
 .form-group {
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@ $accent-color: #d7bfa5;
   }
 }
 
-// 💫 Botón único
+// Botón único
 button {
   background-color: $primary-color;
   color: $text-light;
@@ -115,7 +115,7 @@ button {
   }
 }
 
-// 💖 Mensaje de confirmación
+// Mensaje de confirmación
 .resultado {
   margin-top: 2rem;
   background-color: lighten($secondary-color, 3%);
@@ -137,7 +137,7 @@ button {
   }
 }
 
-// ✨ Animación
+// Animación
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -149,7 +149,7 @@ button {
   }
 }
 
-// 📱 Responsividad
+// Responsividad
 @media (max-width: 480px) {
   .form-container {
     padding: 2rem;
@@ -174,7 +174,7 @@ button {
  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
  margin-bottom: 3rem;
 
- // Efecto hover
+
  transition: all 0.3s ease;
  &:hover {
  transform: translateY(-4px);
@@ -223,13 +223,12 @@ transition: all 0.3s ease;
  }
 }
 
-// 💫 Botón (Usando la regla global de 'button' que ya tienes, solo asegúrate de que sea el mismo selector o extiéndelo)
+
 .columna button {
   @extend button;
 }
 
 
-/* Redes sociales debajo del formulario */
 #redes-sociales {
   background-color: transparent !important;
   box-shadow: none !important;
