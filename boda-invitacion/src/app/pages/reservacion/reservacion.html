@@ -1,0 +1,68 @@
+<div class="d-flex flex-column justify-content-center align-items-center min-vh-100 bg-boda">
+
+    <div class="columna" style="max-width: 500px; width: 100%;">
+        <h2 class="text-center mb-4 title-boda">Reservaciones</h2>
+
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="mb-3">
+                <label class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" name="nombre" required [(ngModel)]="model.nombre" #nombre="ngModel">
+                <div *ngIf="nombre.invalid && nombre.touched" class="text-danger small">
+                    Este campo es obligatorio
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Número de personas</label>
+                <input type="number" class="form-control" name="personas" min="1" [(ngModel)]="model.personas" #personas="ngModel">
+                <div *ngIf="personas.invalid && personas.touched" class="text-danger small">
+                    Debe ser mínimo 1 persona
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Fecha de reservación</label>
+                <input type="date" class="form-control" name="fecha" required [(ngModel)]="model.fecha" #fecha="ngModel" [min]="fechaMinima" [max]="fechaMaxima">
+                <div *ngIf="fecha.invalid && fecha.touched" class="text-danger small">
+                    Seleccione una fecha válida
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Hora</label>
+                <input type="time" class="form-control" name="hora" required [(ngModel)]="model.hora" #hora="ngModel" [min]="horaApertura" [max]="horaCierre">
+                <div *ngIf="hora.invalid && hora.touched" class="text-danger small">
+                    Seleccione una hora
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Notas adicionales (opcional)</label>
+                <textarea class="form-control" rows="3" name="mensaje" [(ngModel)]="model.mensaje"></textarea>
+            </div>
+
+            <button type="submit" class="btn-boda w-100" [disabled]="f.invalid">
+                Enviar reservación
+            </button>
+
+        </form>
+    </div>
+
+
+ <section id="redes-sociales" class="mt-5 py-5">
+        <div class="container text-center">
+            <h2 class="mb-4" style="color: #A67C52; font-weight: 700;">No te olvides de seguirnos</h2>
+
+        <div class="d-flex justify-content-center gap-4 fs-2">
+          <a href="https://facebook.com" target="_blank" class="text-dark"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" class="text-dark"><i class="bi bi-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank" class="text-dark"><i class="bi bi-twitter"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="text-dark"><i class="bi bi-tiktok"></i></a>
+       </div>
+
+      <p class="mt-4 text-muted">
+          © 2025 El Entresuelo – Todos los derechos reservados
+      </p>
+    </div>
+ </section>
+</div>

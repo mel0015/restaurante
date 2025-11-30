@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
+
+// 🎨 Paleta de colores compartida
+$primary-color: #a27b5c; // Bronce/Cobre
+$secondary-color: #f8f4f0; // Crema claro
+$text-dark: #333333;
+$text-light: #fdfdfd;
+$bg-light: #fefcf9;
+$accent-color: #d7bfa5;
+
+// 🌸 Contenedor general
+:host {
+  display: block;
+  background-color: $bg-light;
+  font-family: 'Montserrat', sans-serif;
+  color: $text-dark;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 🌿 Tarjeta del formulario
+.form-container {
+  background-color: white;
+  padding: 2.5rem 3rem;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  margin-bottom: 3rem;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    color: $primary-color;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// 🌾 Campos del formulario
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1.3rem;
+
+  label {
+    font-weight: 600;
+    color: $primary-color;
+    margin-bottom: 0.4rem;
+    font-family: 'Playfair Display', serif;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid lighten($primary-color, 35%);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: $text-dark;
+    background-color: lighten($secondary-color, 2%);
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 6px rgba($primary-color, 0.4);
+      background-color: lighten($secondary-color, 6%);
+    }
+  }
+
+  textarea {
+    resize: none;
+    min-height: 90px;
+  }
+}
+
+// 💫 Botón único
+button {
+  background-color: $primary-color;
+  color: $text-light;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 0.5rem;
+
+  &:hover {
+    background-color: darken($primary-color, 8%);
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    background-color: lighten($primary-color, 25%);
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+// 💖 Mensaje de confirmación
+.resultado {
+  margin-top: 2rem;
+  background-color: lighten($secondary-color, 3%);
+  padding: 1.2rem;
+  border-radius: 15px;
+  color: $text-dark;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  animation: fadeIn 1s ease forwards;
+
+  p {
+    margin: 0.4rem 0;
+    font-family: 'Playfair Display', serif;
+
+    &:first-child {
+      color: $primary-color;
+      font-weight: 700;
+    }
+  }
+}
+
+// ✨ Animación
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 📱 Responsividad
+@media (max-width: 480px) {
+  .form-container {
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+//Columnas del formulario y contacto
+.columna {
+ flex: 1 1 350px;
+ max-width: 400px;
+ background-color: #ffffff;
+ padding: 2.5rem 3rem;
+ border-radius: 25px;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+ margin-bottom: 3rem;
+
+ // Efecto hover
+ transition: all 0.3s ease;
+ &:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+ }
+}
+
+
+.columna h2 {
+ margin-bottom: 1.5rem;
+ font-family: 'Playfair Display', serif;
+ font-size: 2rem;
+ font-weight: 700;
+ color: $primary-color;
+ text-align: center;
+}
+
+
+.columna label {
+ display: block;
+ margin-top: 1rem;
+ margin-bottom: 0.5rem;
+ font-weight: 600;
+ color: $primary-color;
+font-family: 'Playfair Display', serif;
+}
+
+.columna input,
+.columna select,
+.columna textarea {
+font-weight: normal;
+width: 100%;
+padding: 0.8rem 1rem;
+margin-bottom: 1rem;
+border: 1px solid lighten($primary-color, 35%);
+border-radius: 10px;
+font-size: 1rem;
+color: $text-dark;
+background-color: lighten($secondary-color, 2%);
+transition: all 0.3s ease;
+
+ &:focus {
+  outline: none;
+  border-color: $primary-color;
+ box-shadow: 0 0 6px rgba($primary-color, 0.3);
+ }
+}
+
+// 💫 Botón (Usando la regla global de 'button' que ya tienes, solo asegúrate de que sea el mismo selector o extiéndelo)
+.columna button {
+  @extend button;
+}
+
+
+/* Redes sociales debajo del formulario */
+#redes-sociales {
+  background-color: transparent !important;
+  box-shadow: none !important;
+
+  h2 {
+    color: #A67C52;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .d-flex a {
+    font-size: 2rem;
+    color: #A67C52;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: darken(#A67C52, 10%);
+    }
+  }
+
+  p {
+    color: #333333;
+
+  }
+}
+
+

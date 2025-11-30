@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
+
+// Variables de Color (Tema Bronce y Crema)
+$primary-color: #A67C52; // Bronce/Cobre más clásico
+$secondary-color: #EEE9DD; // Crema claro
+$text-dark: #333333;
+$text-light: #FDFDFD;
+$bg-light: #F8F4F0; // Fondo muy claro
+$bg-dark: #121212;
+
+:host {
+    display: block;
+    background-color: $bg-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: $primary-color;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
+        transform: translateY(-2px);
+    }
+}
+.text-primary { color: $primary-color !important; }
+
+/* ==================================== */
+/* 1. SECCIÓN PRINCIPAL PARALLAX */
+/* ==================================== */
+.parallax-section {
+    background-image: url('../../../assets/exterior.png');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #ffffff;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0,0,0,0.45);
+        z-index: 0;
+    }
+
+    .logo-boda {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .iniciales {
+            font-family: 'Playfair Display', serif;
+            font-size: 10rem; /* tamaño enorme */
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 5px;
+            text-shadow: 8px 8px 40px rgba(0,0,0,0.8);
+            margin: 0;
+        }
+
+        .nombres {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        .fecha {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 3px;
+            color: #ffffff;
+
+        }
+
+        /* Animaciones */
+        .iniciales {
+            animation: aparecerZoom 2.5s ease-out forwards;
+        }
+        .nombres, .fecha {
+            animation: fadeIn 3s ease-out forwards;
+        }
+
+        @keyframes aparecerZoom {
+            0% { opacity: 0; transform: scale(0.7); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsividad */
+        @media (max-width: 1200px) {
+            .iniciales { font-size: 14rem; }
+            .nombres { font-size: 3rem; }
+            .fecha { font-size: 1.5rem; }
+        }
+        @media (max-width: 768px) {
+            .iniciales { font-size: 8rem; }
+            .nombres { font-size: 2rem; }
+            .fecha { font-size: 1.2rem; }
+        }
+        @media (max-width: 480px) {
+            .iniciales { font-size: 5rem; }
+            .nombres { font-size: 1.5rem; }
+            .fecha { font-size: 1rem; }
+        }
+    }
+}
+
+
+
+/* NOMBRES DE LA PAREJA - Diseño Central y Elegante */
+.nombres-boda {
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    max-width: 90%;
+}
+
+.nombres-boda h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: $text-light;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 5px;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.nombres-boda .subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    /* Fondo transparente para dejar ver el paisaje nocturno */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    color: $secondary-color; /* Usamos el crema para contraste */
+    letter-spacing: 1px;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ELIMINACIÓN DE LA SECCIÓN DE ENCABEZADO Y EL TEXTO GIGANTE,
+   CENTRÁNDONOS EN EL DISEÑO LIMPIO Y DE CONTRASTE. */
+.encabezado-boda, .nombres-boda h2 {
+    display: none;
+}
+
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+    .nombres-boda h1 {
+        font-size: 3.5rem;
+    }
+    .nombres-boda .subtitulo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nombres-boda h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+    .nombres-boda .subtitulo {
+        font-size: 1.2rem;
+    }
+}
+/* Cierre del bloque .parallax-section */
+
+
+/* ==================================== */
+/* 2. SECCIONES DE CONTENIDO GENERAL */
+/* (Mantenidas como estaban) */
+/* ==================================== */
+.section-gap {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-intro {
+    background-color: $bg-light;
+    .lead {
+        font-size: 1.35rem;
+        line-height: 1.8;
+        max-width: 850px;
+        margin: 0 auto;
+        color: $text-dark;
+    }
+}
+
+/* ==================================== */
+/* 3. CARRUSEL DE GALERÍA */
+/* (Mantenido como estaba) */
+/* ==================================== */
+#galeria-carrusel {
+background-color: $secondary-color;
+
+
+
+.carousel-item img {
+    width: 100%;
+    height: 910px;  /* << AUMENTA LA ALTURA DEL CARRUSEL */
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    bottom: 30px;
+
+    h5 {
+        color: $text-light;
+        font-family: 'Playfair Display', serif;
+    }
+
+    p { color: $text-light; }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: $primary-color;
+    border-radius: 50%;
+    padding: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+
+    &:hover { opacity: 1; }
+}
+
+}
+/* ==================================== */
+/* 4. DETALLES (Tarjetas) */
+/* (Mantenidos como estaban) */
+/* ==================================== */
+#detalles-fiesta {
+    background-color: $bg-light;
+
+    .row {
+        align-items: stretch;
+    }
+
+    .info-card {
+        padding: 40px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        margin-bottom: 25px;
+        transition: transform 0.3s ease-in-out;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        h3 {
+            border-bottom: 3px solid $primary-color;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        strong { color: $primary-color; }
+
+        .icon-lg {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: $primary-color;
+        }
+    }
+
+    .mapa-incrustado {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+        iframe {
+            width: 100%;
+            height: 550px;
+            border: 0;
+        }
+    }
+}
+
+/* ==================================== */
+/* 5. SECCIÓN DE RSVP */
+/* (Mantenida como estaba) */
+/* ==================================== */
+.rsvp-section {
+    background-color: $primary-color;
+    color: $text-light;
+
+    h2 {
+        color: $text-light;
+        margin-bottom: 30px;
+    }
+
+    .lead {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        font-size: 1.4rem;
+    }
+
+    .btn-lg {
+        padding: 18px 50px;
+        font-size: 1.4rem;
+        border-radius: 40px;
+        background-color: $text-light;
+        color: $primary-color;
+        border: none;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: darken($text-light, 5%);
+            color: darken($primary-color, 10%);
+            transform: scale(1.05);
+        }
+    }
+}
+
+

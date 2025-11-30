@@ -1,0 +1,20 @@
+<div class="app-wrapper">
+  <nav class="navbar-boda">
+    <h1 class="navbar-brand-title">El Entresuelo</h1>
+    <div class="navbar-nav-links">
+      <a routerLink="/" class="nav-link">Inicio</a>
+      <a routerLink="/register" class="nav-link">Registrarse</a>
+      <a routerLink="/reservacion" class="nav-link">Reservaciones</a>
+      <a routerLink="/opiniones" class="nav-link">Opiniones</a>
+      <a routerLink="/listado-reservaciones" class="nav-link">Lista de Reservaciones</a>
+      <a routerLink="/listado-opiniones" class="nav-link">Lista de Opiniones</a>
+      <a class="nav-link"(click)="logout()" href="#" title="Cerrar sesión">
+      <i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
+    </div>
+  </nav>
+
+  <main class="contenido">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+

@@ -1,0 +1,39 @@
+<div class="form-container">
+  <h2>Iniciar Sesión</h2>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+    <!-- TELEFONO -->
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input
+        type="text"
+        id="telefono"
+        name="telefono"
+        [(ngModel)]="model.telefono"
+        required
+        placeholder="Ingresa tu teléfono"
+      />
+    </div>
+
+    <!-- CONTRASEÑA -->
+    <div class="form-group">
+      <label for="contrasena">Contraseña</label>
+      <input
+        type="password"
+        id="contrasena"
+        name="contrasena"
+        [(ngModel)]="model.contrasena"
+        required
+        placeholder="Ingresa tu contraseña"
+      />
+    </div>
+
+    <button [disabled]="f.invalid">Entrar</button>
+  </form>
+
+  <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #666;">
+    ¿No tienes cuenta?
+    <a routerLink="/register" style="color: #a27b5c; font-weight: 600;">Regístrate aquí</a>
+  </p>
+</div>

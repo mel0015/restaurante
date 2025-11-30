@@ -1,0 +1,54 @@
+<div class="app-wrapper">
+  <nav class="navbar-boda">
+  </nav>
+<main class="contenido">
+  <h2 class="titulo-listado">Listado de Reservaciones</h2>
+<div class="tabla-container">
+  <table class="tabla-personalizada">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Personas</th>
+        <th>Mensaje</th>
+        <th>Teléfono</th>
+        <th>Fecha</th>
+        <th>Usuario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of reservaciones">
+        <td>{{r.id}}</td>
+        <td>{{r.nombre}}</td>
+        <td>{{r.personas}}</td>
+        <td>{{r.mensaje || '-'}}</td>
+        <td>{{r.telefono || '-'}}</td>
+        <td>{{r.fecha | date:'short'}}</td>
+        <td>{{r.usuario || '-'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</main>
+
+ <!-- Footer / Redes sociales -->
+    <section id="redes-sociales" class="mt-5 py-5">
+      <div class="container text-center">
+        <h2 class="mb-4" style="color: #A67C52; font-weight: 700;">
+          No te olvides de seguirnos
+        </h2>
+
+        <div class="d-flex justify-content-center gap-4 fs-2">
+          <a href="https://facebook.com" target="_blank" class="text-dark"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" class="text-dark"><i class="bi bi-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank" class="text-dark"><i class="bi bi-twitter"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="text-dark"><i class="bi bi-tiktok"></i></a>
+        </div>
+
+        <p class="mt-4 text-muted">
+          © 2025 El Entresuelo – Todos los derechos reservados
+        </p>
+      </div>
+    </section>
+</div>
+

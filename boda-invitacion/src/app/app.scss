@@ -1,0 +1,81 @@
+/* Importa Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.app-wrapper {
+  font-family: 'Playfair Display', serif; // fuente general para contenido
+  background-color: #f8f5f2;
+}
+
+/* Navbar limpio y elegante */
+.navbar-boda {
+  background: transparent;
+  box-shadow: none;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Título principal */
+  .navbar-brand-title {
+    font-family: 'Playfair Display', serif;
+    color: #A27B5C;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: darken(#A27B5C, 10%);
+      transform: scale(1.03);
+    }
+  }
+
+  /* Enlaces del menú */
+  .navbar-nav-links {
+    display: flex;
+    gap: 7px;
+    align-items: center; // Alineación vertical de los enlaces
+
+    .nav-link {
+      font-family: 'Montserrat', sans-serif !important; // fuerza Montserrat
+      font-weight: 600 !important;
+      color: #333;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 5px 10px; // Pequeño padding para área de clic
+      transition: color 0.3s ease;
+      white-space: nowrap; // Evita saltos de línea en enlaces largos
+
+      &:hover {
+        color: #A27B5C;
+      }
+    }
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar-boda {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+
+    .navbar-brand-title {
+      font-size: 2.3rem;
+    }
+
+    .navbar-nav-links {
+      flex-direction: column;
+      gap: 10px;
+
+      .nav-link {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+

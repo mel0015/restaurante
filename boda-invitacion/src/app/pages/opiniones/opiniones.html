@@ -1,0 +1,114 @@
+<div class="contenedor">
+
+  <!-- Columna izquierda: Formulario -->
+  <div class="columna">
+    <h2>Opiniones del Cliente</h2>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+      <label>Calificación:</label>
+      <select [(ngModel)]="model.calificacion" name="calificacion" required>
+        <option value="1">★ 1</option>
+        <option value="2">★★ 2</option>
+        <option value="3">★★★ 3</option>
+        <option value="4">★★★★ 4</option>
+        <option value="5">★★★★★ 5</option>
+      </select>
+
+      <label>Comentario:</label>
+      <textarea [(ngModel)]="model.comentario" name="comentario" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Columna derecha: Contacto -->
+  <div class="columna contacto">
+    <h2>Nuestro contacto</h2>
+
+      <p><span class="icono">📍</span> Av Álvaro Obregón #130, Ciudad de México</p>
+      <p><span class="icono">📞</span> +52 477 101 1122</p>
+      <p><span class="icono">✉️</span> elEntresuelo@gmail.com</p>
+      <p><span class="icono">⏰</span> Lun - Sab: 2:00 PM - 1:00 AM</p>
+  </div>
+
+</div>
+<section id="redes-sociales" class="mt-5 py-5">
+        <div class="container text-center">
+            <h2 class="mb-4" style="color: #A67C52; font-weight: 700;">No te olvides de seguirnos</h2>
+
+        <div class="d-flex justify-content-center gap-4 fs-2">
+          <a href="https://facebook.com" target="_blank" class="text-dark"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" class="text-dark"><i class="bi bi-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank" class="text-dark"><i class="bi bi-twitter"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="text-dark"><i class="bi bi-tiktok"></i></a>
+       </div>
+
+      <p class="mt-4 text-muted">
+          © 2025 El Entresuelo – Todos los derechos reservados
+      </p>
+    </div>
+ </section>
+
+
+
+<!--<div class="form-container">
+  <h2>Confirma tu asistencia</h2>
+
+  <form (ngSubmit)="onSubmit()" #formAsistencia="ngForm" novalidate>
+    <div class="form-group">
+      <label for="nombre">Nombre completo:</label>
+      <input
+        id="nombre"
+        type="text"
+        name="nombre"
+        [(ngModel)]="model.nombre"
+        required
+        placeholder="Ej. Ana López">
+    </div>
+
+    <div class="form-group">
+      <label for="acompanantes">Número de acompañantes:</label>
+      <input
+        id="acompanantes"
+        type="number"
+        name="acompanantes"
+        [(ngModel)]="model.acompanantes"
+        min="0"
+        placeholder="Ej. 2">
+    </div>
+
+    <div class="form-group">
+      <label for="confirmacion">¿Confirmas tu asistencia?</label>
+      <select
+        id="confirmacion"
+        name="confirmacion"
+        [(ngModel)]="model.confirmacion"
+        required>
+        <option value="">Selecciona una opción</option>
+        <option value="si">Sí asistiré</option>
+        <option value="no">No podré asistir</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje">Mensaje (opcional):</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        [(ngModel)]="model.mensaje"
+        placeholder="Déjanos un mensaje si lo deseas..."></textarea>
+    </div>
+
+
+    <button type="submit" [disabled]="!formAsistencia.valid">Enviar</button>
+  </form>
+
+  <div *ngIf="enviado" class="resultado">
+    <p>¡Gracias por confirmar, {{ model.nombre }}!</p>
+    <p *ngIf="model.confirmacion === 'si'">Nos alegra que nos acompañes 🎉</p>
+    <p *ngIf="model.confirmacion === 'no'">Lamentamos que no puedas asistir 😢</p>
+  </div>
+</div>
+-->
+
